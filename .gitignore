@@ -1,0 +1,10 @@
+data/*.csv
+*.py[cod]
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+.env
+.DS_Store
+docs/
+

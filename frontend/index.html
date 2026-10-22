@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover your next favorite movie with cinematic recommendations.">
+  <title>Reelwise — Find your next favorite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar"><a class="brand" href="/"><span class="brand-mark">✦</span> reelwise</a><button class="how-link" id="how-link">How it works <span>↗</span></button></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL CINEMA COMPASS</p>
+      <h1>Find a film<br><em>you'll love.</em></h1>
+      <p class="tagline">Tell us one movie you enjoyed. We'll find the hidden gems<br class="desktop"> waiting in your orbit.</p>
+      <div class="search-wrap">
+        <label for="search-input" class="sr-only">Search for a movie</label>
+        <span class="search-icon">⌕</span><input id="search-input" autocomplete="off" placeholder="Search for a movie..." aria-controls="search-results" aria-expanded="false">
+        <span class="shortcut">⌘ K</span>
+        <div id="search-results" class="search-results" role="listbox"></div>
+      </div>
+      <div id="status" class="status" aria-live="polite"><span class="pulse"></span> Warming up the movie universe...</div>
+    </section>
+    <section id="discover" class="discover hidden">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT WATCH</p><h2 id="section-title">Because you liked this</h2></div><div id="history" class="history"></div></div>
+      <div id="recommendations" class="movie-grid"></div>
+      <div id="empty-state" class="empty hidden"></div>
+    </section>
+    <section class="how-section"><p class="eyebrow">A LITTLE MOVIE MAGIC</p><h2>Recommendations with a<br><em>human touch.</em></h2><p>Reelwise looks at the people who loved your pick, then finds the movies they loved too — balancing shared taste against what's simply popular.</p><div class="steps"><div><b>01</b><strong>Pick a favorite</strong><span>Search thousands of films</span></div><div><b>02</b><strong>Find your circle</strong><span>We map shared high ratings</span></div><div><b>03</b><strong>Get inspired</strong><span>Discover your next story</span></div></div></section>
+  </main>
+  <div id="how-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><button class="close" id="close-modal" aria-label="Close">×</button><p class="eyebrow">BEHIND THE REEL</p><h2 id="modal-title">How it works</h2><p>We find viewers who rated your movie above 4 stars, count which other movies those viewers also loved, and compare that share with the broader MovieLens audience. That makes popular-but-obvious movies less dominant and surfaces distinctive matches.</p><p class="muted">Your searched film is always excluded from its own recommendations.</p></div></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
