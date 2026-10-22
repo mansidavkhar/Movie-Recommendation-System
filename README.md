@@ -1,6 +1,6 @@
-# Reelwise — Hybrid Movie Recommendation System
+# Hybrid Movie Recommendation System
 
-Reelwise is a no-build Flask web application for discovering movies from the MovieLens 25M dataset. It separates two problems that are often confused:
+This project is a no-build Flask web application for discovering movies from the MovieLens 25M dataset. It separates two problems that are often confused:
 
 1. **Movie identification:** accurately find the movie the user typed.
 2. **Movie recommendation:** find related films using metadata and audience behavior, even when their titles share no words.
@@ -36,6 +36,8 @@ The active implementation is [backend/app.py](backend/app.py), which imports [ba
 ## Dataset
 
 The local MovieLens files are stored in [data/](data/):
+
+You can download the dataset here: https://grouplens.org/datasets/movielens/25m/
 
 - `movies.csv`: `movieId,title,genres`
 - `ratings.csv`: `userId,movieId,rating,timestamp`
